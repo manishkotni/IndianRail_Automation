@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include <pthread.h>
 
-#include "caltrain.h"
+#include "IndianRail.h"
 
 // Count of passenger threads that have completed (i.e. station_wait_for_train
 // has returned) and are awaiting a station_on_board() invocation.
@@ -71,7 +71,7 @@ main()
 
 	srandom(getpid() ^ time(NULL));
 
-	signal(SIGALRM(), alarm_handler);
+	signal(SIGALRM, alarm_handler);
 
 	// Make sure station_load_train() returns immediately if no waiting passengers.
 	_alarm(1, "station_load_train() did not return immediately when no waiting passengers");
