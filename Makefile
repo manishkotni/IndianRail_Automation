@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-Wall -Wno-unused-value
 
-caltrain: caltrain-runner.c caltrain.c caltrain.h
-	$(CC) -c caltrain.c -o caltrain.o
-	$(CC) -c caltrain-runner.c -o caltrain-runner.o
-	$(CC) $(CFLAGS) caltrain.o caltrain-runner.o -o run -lpthread
+IndianRail: IndianRail-runner.c IndianRail.c IndianRail.h
+	$(CC) -c IndianRail.c -o IndianRail.o
+	$(CC) -c IndianRail-runner.c -o IndianRail-runner.o
+	$(CC) $(CFLAGS) IndianRail.o IndianRail-runner.o -o run -lpthread
